@@ -51,6 +51,13 @@ const shipmentRoutes = require('./routes/shipments');
 // Routes
 app.use('/api', shipmentRoutes);
 
+// Redirect /shipments and /shipment routes to /api/shipments and /api/shipment for compatibility
+app.use(['/shipments', '/shipments*', '/shipment', '/shipment*'], (req, res) => {
+  // Build new path by prefixing /api
+  const newPath = '/api' + req.originalUrl;
+  res.redirect(307, newPath);
+});
+
 // Root route - Add this new route
 app.get('/', (req, res) => {
   res.json({
