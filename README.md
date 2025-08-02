@@ -207,6 +207,15 @@ The API returns standardized error responses:
 - `404` - Not Found
 - `500` - Internal Server Error
 
+## 🌐 Production Deployment
+
+### Render Deployment
+
+This application is deployed on Render. The backend requires:
+- Node.js environment
+- MongoDB Atlas connection
+- Environment variables configuration
+
 ## 📁 Project Structure
 
 ```
@@ -271,83 +280,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 **Built for efficient cargo tracking and logistics management**
 
 *Simple, reliable shipment tracking API with real-time capabilities.*
-*Simple, reliable shipment tracking API with real-time capabilities.*
-- `400` - Bad Request (validation errors)
-- `401` - Unauthorized
-- `403` - Forbidden
-- `404` - Not Found
-- `429` - Too Many Requests
-- `500` - Internal Server Error
-
-## 🔮 Future Enhancements
-
-### Real-time Features
-- **WebSocket Integration**: Real-time location updates
-- **Push Notifications**: Status change alerts
-- **Live ETA Updates**: Dynamic recalculation based on traffic/weather
-
-### External Integrations
-- **GPS Tracking Devices**: Automatic location updates
-- **Weather APIs**: Weather-based delay predictions
-- **Traffic APIs**: Route optimization and delay calculations
-- **Carrier APIs**: Integration with shipping company systems
-
-### Advanced Features
-- **Machine Learning**: Predictive ETA using historical data
-- **Geofencing**: Automatic status updates when entering/leaving zones
-- **Analytics Dashboard**: Performance metrics and insights
-- **Multi-tenant Support**: Support for multiple shipping companies
-
-### Security Enhancements
-- **JWT Authentication**: Secure API access
-- **Role-based Access Control**: Different permissions for users
-- **API Key Management**: Rate limiting and usage tracking
-- **Data Encryption**: Sensitive data protection
-
-### Performance Optimizations
-- **Redis Caching**: Frequently accessed data caching
-- **Database Indexing**: Optimized queries
-- **CDN Integration**: Static asset delivery
-- **Horizontal Scaling**: Multi-instance deployment
-
-## 🧪 Testing
-
-```bash
-# Run all tests
-npm test
-
-# Run tests with coverage
-npm run test:coverage
-
-# Run specific test suites
-npm run test:unit
-npm run test:integration
-
-# Run tests in watch mode
-npm run test:watch
-```
-
-## 📝 API Documentation
-
-Access the interactive API documentation at:
-- Development: `http://localhost:5000/api-docs`
-- Swagger/OpenAPI specification available
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/new-feature`
-3. Commit changes: `git commit -am 'Add new feature'`
-4. Push to branch: `git push origin feature/new-feature`
-5. Submit a Pull Request
-
-## 📞 Support
-
-For issues and questions:
-- Create an issue in the GitHub repository
-- Check existing documentation
-- Review API examples
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.

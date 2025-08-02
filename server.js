@@ -8,8 +8,16 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+const corsOptions = {
+  origin: [
+    'http://localhost:5173',
+    'https://shipment-tracker-1b7s.onrender.com', // Your frontend URL
+     // If you have custom domain
+  ],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // MongoDB connection
