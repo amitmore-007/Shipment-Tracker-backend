@@ -12,16 +12,26 @@ const corsOptions = {
   origin: [
     'http://localhost:5173',
     'http://localhost:3000',
-    'https://shipment-tracker-1b7s.onrender.com/', // Your frontend URL
-    'https://shipment-tracker-frontend.onrender.com', // Alternative frontend URL
-    'https://shipment-tracker-backend-c76e.onrender.com', // Add your new backend URL
-    // Add any other domains you might use
+    'https://shipment-tracker-1b7s.onrender.com',
+    'https://shipment-tracker-frontend.onrender.com',
+    'https://shipment-tracker-backend-c76e.onrender.com'
+    // No trailing slashes!
   ],
-  credentials: true
+  credentials: true,
+  // For debugging CORS issues, you can use the following function:
+  /*
+  origin: function (origin, callback) {
+    console.log('CORS request from:', origin);
+    callback(null, true); // Allow all for debugging, restrict in production!
+  },
+  */
 };
 
 app.use(cors(corsOptions));
 app.use(express.json());
+
+// Handle preflight requests for all routes
+app.options('*', cors(corsOptions));
 
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/shipment-tracker', {
@@ -103,6 +113,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
 console.log(`Server is running on port ${PORT}`);
 console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`Server is running on port ${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 });
