@@ -69,18 +69,15 @@ app.get('/health', (req, res) => {
   res.json({ 
     status: 'Server is running', 
     timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || 'development'  });
+    environment: process.env.NODE_ENV || 'development'
   });
 });
-ging - Update to exclude root route
-const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {f (!req.originalUrl.includes('/favicon.ico')) {
-  console.log(`Server is running on port ${PORT}`);    console.log(`404 - Route not found: ${req.method} ${req.originalUrl}`);
-
-
-
-});  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);  }
+// 404 handler for undefined routes
+app.use('*', (req, res) => {
+  if (!req.originalUrl.includes('/favicon.ico')) {
+    console.log(`404 - Route not found: ${req.method} ${req.originalUrl}`);
+  }
   
   res.status(404).json({
     error: 'Route not found',
@@ -104,6 +101,8 @@ app.listen(PORT, () => {f (!req.originalUrl.includes('/favicon.ico')) {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
+console.log(`Server is running on port ${PORT}`);
+console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`Server is running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 });
