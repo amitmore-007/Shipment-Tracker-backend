@@ -2,6 +2,12 @@
 
 A robust Backend API for the Cargo Shipment Tracker application built with Node.js, Express, and MongoDB. This RESTful API provides comprehensive shipment management, real-time location tracking, and ETA calculations for cargo logistics operations.
 
+## 🌐 Live Demo & Repositories
+
+- 🚀 **Deployed App**: [https://shipment-tracker-1b7s.onrender.com/](https://shipment-tracker-1b7s.onrender.com/)  
+- 🚀 **Deployed Backend**: [https://shipment-tracker-backend-c76e.onrender.com/api](https://shipment-tracker-backend-c76e.onrender.com/api)  
+- 🧠 **Frontend Repository**: [https://github.com/amitmore-007/Shipment-Tracker](https://github.com/amitmore-007/Shipment-Tracker)
+
 ## 🚀 Features
 
 - **RESTful API Architecture**: Clean, scalable API design following REST principles
