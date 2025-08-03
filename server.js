@@ -15,16 +15,10 @@ const corsOptions = {
     'https://shipment-tracker-1b7s.onrender.com',
     'https://shipment-tracker-frontend.onrender.com',
     'https://shipment-tracker-backend-c76e.onrender.com'
-    // No trailing slashes!
+   
   ],
   credentials: true,
-  // For debugging CORS issues, you can use the following function:
-  /*
-  origin: function (origin, callback) {
-    console.log('CORS request from:', origin);
-    callback(null, true); // Allow all for debugging, restrict in production!
-  },
-  */
+ 
 };
 
 app.use(cors(corsOptions));
